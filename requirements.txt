@@ -1,0 +1,14 @@
+# Chatting Agent 依赖列表
+
+# 【知识点：OpenAI SDK 的兼容性】
+# OpenAI 的 Python SDK 支持所有兼容 OpenAI API 格式的服务。
+# 只要对方提供：/v1/chat/completions 接口，就可以用这个 SDK 调用。
+# 国内兼容服务包括：硅基流动(SiliconFlow)、DeepSeek、阿里云百炼、百度千帆等。
+openai>=1.30.0
+
+# 【知识点：tiktoken】
+# OpenAI 开源的 tokenizer 库，用于精确计算 GPT 系列模型的 Token 数量。
+# 注意：tiktoken 需要 C 编译器，Windows 用户如果没有编译器，
+# 可能需要安装预编译的 wheel 或 Visual C++ Build Tools。
+# 如果遇到安装失败，可以尝试：pip install tiktoken --only-binary :all:
+tiktoken>=0.7.0
